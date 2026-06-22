@@ -279,12 +279,35 @@
     letter-spacing: 0.05em;
   }
 
+  .about-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-photo {
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    aspect-ratio: 3/4;
+  }
+
   @media (max-width: 640px) {
     nav { padding: 1rem 1.25rem; }
     .hero, section { padding-left: 1.25rem; padding-right: 1.25rem; }
     .two-col { grid-template-columns: 1fr; gap: 2.5rem; }
     .work-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 0.5rem; }
+
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .about-photo {
+      aspect-ratio: 4/3;
+      max-height: 280px;
+    }
   }
 </style>
 </head>
@@ -303,13 +326,13 @@
   <p class="hero-eyebrow">Portfolio — 2026</p>
   <h1 class="hero-name">Wyatt <em>Fales</em></h1>
   <div class="hero-rule"></div>
-  <p class="hero-sub">Math student at the University of Notre Dame</p>
+  <p class="hero-sub">Mathematics student at the University of Notre Dame</p>
 </section>
 
 <section id="about">
   <p class="section-label">About</p>
-  <div style="display:grid;grid-template-columns:200px 1fr 1fr;gap:4rem;align-items:start;">
-    <div style="border-radius:var(--border-radius-lg);overflow:hidden;aspect-ratio:3/4;"><img src="DSCF7501.jpeg" alt="Wyatt Fales" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;"></div>
+  <div class="about-grid">
+    <div class="about-photo"><img src="DSCF7501.jpeg" alt="Wyatt Fales" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;"></div>
     <div>
       <h2 class="about-headline">Thoughtful work, built with care.</h2>
       <p class="about-body">This is where your story goes. Talk about your background, what you value in your craft, and the kinds of problems you like solving. Keep it honest and specific — specificity is what makes a portfolio feel real.</p>
